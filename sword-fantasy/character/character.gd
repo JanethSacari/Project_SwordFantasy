@@ -2,6 +2,7 @@ extends CharacterBody2D
 var _animation_suffix: String = "_baixo"
 
 @export var _move_speed: float = 128.0
+@export var _character_animation: AnimationPlayer
 
 func _physics_process(_delta: float) -> void:
 	var basic_move = Input.get_vector("move_left", "move_right", "move_up", "move_down")

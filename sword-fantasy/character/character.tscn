@@ -607,8 +607,9 @@ _data = {
 "walking_up": SubResource("Animation_d0rbj")
 }
 
-[node name="Character" type="CharacterBody2D"]
+[node name="Character" type="CharacterBody2D" node_paths=PackedStringArray("_character_animation")]
 script = ExtResource("1_wvgcb")
+_character_animation = NodePath("Character_animation")
 
 [node name="Texture" type="Sprite2D" parent="."]
 texture = ExtResource("1_voo8b")
