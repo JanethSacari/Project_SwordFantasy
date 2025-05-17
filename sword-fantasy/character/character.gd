@@ -1,5 +1,5 @@
 extends CharacterBody2D
-var _animation_suffix: String = "_baixo"
+var _animation_suffix: String = "_down"
 
 @export var _move_speed: float = 128.0
 @export var _character_animation: AnimationPlayer
