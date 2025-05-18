@@ -11,6 +11,7 @@ func _physics_process(_delta: float) -> void:
 	move_and_slide()
 	
 	_animation_suffix = _char_suffix()
+	_animation()
 	print(_animation_suffix)
 
 func _char_suffix() -> String:
@@ -29,3 +30,10 @@ func _char_suffix() -> String:
 		return "_down"
 		
 	return "_animation_suffix"
+
+func _animation() -> void:
+	if velocity:
+		_character_animation.play("walking" + _animation_suffix)
+		return
+
+	_character_animation.play("look" + _animation_suffix)
