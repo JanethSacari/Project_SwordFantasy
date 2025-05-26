@@ -871,10 +871,11 @@ _data = {
 "walking_up": SubResource("Animation_d0rbj")
 }
 
-[node name="Character" type="CharacterBody2D" node_paths=PackedStringArray("_character_animation")]
+[node name="Character" type="CharacterBody2D" node_paths=PackedStringArray("_character_animation", "_action_timer")]
 script = ExtResource("1_wvgcb")
 _move_speed = 96.0
 _character_animation = NodePath("Character_animation")
+_action_timer = NodePath("Action_Timer")
 
 [node name="Texture" type="Sprite2D" parent="."]
 texture = ExtResource("1_voo8b")
@@ -885,3 +886,8 @@ vframes = 10
 libraries = {
 "": SubResource("AnimationLibrary_tkycv")
 }
+
+[node name="Action_Timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="Action_Timer" to="." method="_on_action_timer_timeout"]

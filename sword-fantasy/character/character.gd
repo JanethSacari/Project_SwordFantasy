@@ -1,8 +1,11 @@
 extends CharacterBody2D
+
+var _can_attack: bool = true
 var _animation_suffix: String = "_down"
 
 @export var _move_speed: float = 128.0
 @export var _character_animation: AnimationPlayer
+@export var _action_timer: Timer
 
 func _physics_process(_delta: float) -> void:
 	var basic_move = Input.get_vector(
@@ -12,6 +15,7 @@ func _physics_process(_delta: float) -> void:
 	move_and_slide()
 	
 	_animation_suffix = _char_suffix()
+	_attacking()
 	_animation()
 
 func _char_suffix() -> String:
@@ -30,9 +34,21 @@ func _char_suffix() -> String:
 		return "_down"
 		
 	return _animation_suffix
+	
+func _attacking() -> void:
+	if Input.is_action_just_pressed("attack_mode") and _can_attack:
+		_character_animation.play("attack" + _animation_suffix)
+		_action_timer.start(0.4)
+		_can_attack = false
 
 func _animation() -> void:
+	if _can_attack == false:
+		return
+		
 	if velocity:
 		_character_animation.play("walking" + _animation_suffix)
 		return
 	_character_animation.play("look" + _animation_suffix)
+
+func _on_action_timer_timeout() -> void:
+	_can_attack = true
