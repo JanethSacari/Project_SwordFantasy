@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://n04hb0to1ak8"]
+[gd_scene load_steps=18 format=3 uid="uid://n04hb0to1ak8"]
 
 [ext_resource type="Texture2D" uid="uid://2twhahpec535" path="res://character/Hero.png" id="1_voo8b"]
 [ext_resource type="Script" path="res://character/character.gd" id="1_wvgcb"]
@@ -64,6 +64,18 @@ tracks/4/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AttackArea/CollisionShapeArea:disabled")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="Animation" id="Animation_l63ba"]
@@ -653,10 +665,22 @@ tracks/4/path = NodePath("Texture:flip_h")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0.215922),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0.1, 0.215922),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [false]
+"values": [false, false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AttackArea/CollisionShapeArea:disabled")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, true]
 }
 
 [sub_resource type="Animation" id="Animation_solq3"]
@@ -723,6 +747,18 @@ tracks/4/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AttackArea/CollisionShapeArea:disabled")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, true]
+}
 
 [sub_resource type="Animation" id="Animation_acnmj"]
 resource_name = "attack_left"
@@ -787,6 +823,18 @@ tracks/4/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [true, true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AttackArea/CollisionShapeArea:disabled")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, true]
 }
 
 [sub_resource type="Animation" id="Animation_ffepr"]
@@ -853,6 +901,18 @@ tracks/4/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AttackArea/CollisionShapeArea:disabled")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, true]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_tkycv"]
 _data = {
@@ -871,6 +931,8 @@ _data = {
 "walking_up": SubResource("Animation_d0rbj")
 }
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_d34we"]
+
 [node name="Character" type="CharacterBody2D" node_paths=PackedStringArray("_character_animation", "_action_timer")]
 script = ExtResource("1_wvgcb")
 _move_speed = 96.0
@@ -878,6 +940,7 @@ _character_animation = NodePath("Character_animation")
 _action_timer = NodePath("Action_Timer")
 
 [node name="Texture" type="Sprite2D" parent="."]
+position = Vector2(0.5, -7)
 texture = ExtResource("1_voo8b")
 hframes = 6
 vframes = 10
@@ -889,5 +952,12 @@ libraries = {
 
 [node name="Action_Timer" type="Timer" parent="."]
 one_shot = true
+
+[node name="AttackArea" type="Area2D" parent="."]
+position = Vector2(0, 8)
+
+[node name="CollisionShapeArea" type="CollisionShape2D" parent="AttackArea"]
+shape = SubResource("CircleShape2D_d34we")
+disabled = true
 
 [connection signal="timeout" from="Action_Timer" to="." method="_on_action_timer_timeout"]
