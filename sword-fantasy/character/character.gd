@@ -37,6 +37,7 @@ func _char_suffix() -> String:
 	
 func _attacking() -> void:
 	if Input.is_action_just_pressed("attack_mode") and _can_attack:
+		set_physics_process(false)
 		_character_animation.play("attack" + _animation_suffix)
 		_action_timer.start(0.4)
 		_can_attack = false
@@ -51,4 +52,5 @@ func _animation() -> void:
 	_character_animation.play("look" + _animation_suffix)
 
 func _on_action_timer_timeout() -> void:
+	set_physics_process(true)
 	_can_attack = true
