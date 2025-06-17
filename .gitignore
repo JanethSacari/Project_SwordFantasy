@@ -77,3 +77,37 @@ build/
 .settings
 .springBeans
 .sts4-cache
+
+# Arquivos e pastas de cache
+.import/
+.export/
+godot/tmp/
+
+# Arquivos de backup e temporários
+*.tmp
+*.converted.*
+*.bak
+*.backup
+*~
+
+# Arquivos de log e debug
+*.log
+
+# Arquivos de builds exportados
+*.exe
+*.apk
+*.pck
+*.zip
+*.x86_64
+*.dmg
+*.tar.gz
+
+# Arquivos ocultos de sistemas operacionais
+.DS_Store
+Thumbs.db
+
+# Pasta do editor Godot que pode ser criada localmente
+.editor/
+
+# Godot 4 specific (alguns builds e cache extra)
+.godot/
