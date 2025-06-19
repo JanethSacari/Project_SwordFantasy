@@ -1,13 +1,14 @@
 extends CharacterBody2D
 
 var _can_attack: bool = true
-var _actual_weapon: String = "sword"
+var _actual_weapon: String = "watering_can"
 var _animation_suffix: String = "_down"
 
 @export var _move_speed: float = 128.0
 @export var _character_animation: AnimationPlayer
 @export var _action_timer: Timer
 @export var _attack_area: Area2D
+@export var _weapon_text: Label
 
 func _physics_process(_delta: float) -> void:
 	var basic_move = Input.get_vector(
@@ -17,6 +18,7 @@ func _physics_process(_delta: float) -> void:
 	move_and_slide()
 	
 	_animation_suffix = _char_suffix()
+	_weapon_text.text = _actual_weapon
 	_attacking()
 	_animation()
 
