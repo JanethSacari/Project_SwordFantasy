@@ -18,7 +18,7 @@ func _physics_process(_delta: float) -> void:
 	move_and_slide()
 	
 	_animation_suffix = _char_suffix()
-	_weapon_text.text = _actual_weapon
+	_set_current_weapon()
 	_attacking()
 	_animation()
 
@@ -49,6 +49,19 @@ func _attacking() -> void:
 		_character_animation.play("attack_" + _actual_weapon + _animation_suffix)
 		_action_timer.start(0.4)
 		_can_attack = false
+		
+func _set_current_weapon() -> void:
+	if Input.is_action_just_pressed("sword"):
+		_actual_weapon = "sword"
+	if Input.is_action_just_pressed("hatchet"):
+		_actual_weapon = "hatchet"
+	if Input.is_action_just_pressed("axe"):
+		_actual_weapon = "axe"
+	if Input.is_action_just_pressed("hoe"):
+		_actual_weapon = "hoe"
+	if Input.is_action_just_pressed("watering_can"):
+		_actual_weapon = "watering_can"
+	_weapon_text.text = _actual_weapon
 
 func _animation() -> void:
 	if _can_attack == false:
