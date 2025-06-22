@@ -90,6 +90,18 @@ tracks/6/keys = {
 "update": 1,
 "values": ["res://.godot/imported/Hero_Moves.png-fba90a4d3f4925e5f1f6e14c941dfa94.ctex"]
 }
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Texture:texture:resource_path")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["res://character/Hero.png"]
+}
 
 [sub_resource type="Animation" id="Animation_dns1t"]
 resource_name = "attack_axe_down"
@@ -126,10 +138,10 @@ tracks/2/path = NodePath("Texture:texture")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [ExtResource("3_s8gif")]
+"values": [ExtResource("3_s8gif"), ExtResource("3_s8gif")]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -169,7 +181,7 @@ tracks/5/keys = {
 }
 tracks/6/type = "value"
 tracks/6/imported = false
-tracks/6/enabled = true
+tracks/6/enabled = false
 tracks/6/path = NodePath("Texture:texture:load_path")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
@@ -393,10 +405,10 @@ tracks/2/path = NodePath("Texture:texture")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [ExtResource("3_s8gif")]
+"values": [ExtResource("3_s8gif"), ExtResource("3_s8gif")]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -1235,6 +1247,18 @@ tracks/5/keys = {
 "update": 1,
 "values": [true, false, true]
 }
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Texture:texture:resource_path")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["res://character/Hero.png"]
+}
 
 [sub_resource type="Animation" id="Animation_acnmj"]
 resource_name = "attack_sword_left"
@@ -1271,10 +1295,10 @@ tracks/2/path = NodePath("Texture:texture")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [ExtResource("1_voo8b")]
+"values": [ExtResource("1_voo8b"), ExtResource("1_voo8b")]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -1311,6 +1335,18 @@ tracks/5/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [true, false, true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Texture:texture:load_path")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["res://.godot/imported/Hero.png-f28a2cc171cc82f288233f3e51d6744e.ctex"]
 }
 
 [sub_resource type="Animation" id="Animation_solq3"]
@@ -1367,7 +1403,7 @@ tracks/3/keys = {
 }
 tracks/4/type = "value"
 tracks/4/imported = false
-tracks/4/enabled = true
+tracks/4/enabled = false
 tracks/4/path = NodePath("Texture:flip_h")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
@@ -1444,7 +1480,7 @@ tracks/3/keys = {
 }
 tracks/4/type = "value"
 tracks/4/imported = false
-tracks/4/enabled = true
+tracks/4/enabled = false
 tracks/4/path = NodePath("Texture:flip_h")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
@@ -1521,7 +1557,7 @@ tracks/3/keys = {
 }
 tracks/4/type = "value"
 tracks/4/imported = false
-tracks/4/enabled = true
+tracks/4/enabled = false
 tracks/4/path = NodePath("Texture:flip_h")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
