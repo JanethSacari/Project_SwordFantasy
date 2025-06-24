@@ -2366,4 +2366,6 @@ label_settings = SubResource("LabelSettings_tjcyj")
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Camera2D" type="Camera2D" parent="."]
+
 [connection signal="timeout" from="Action_Timer" to="." method="_on_action_timer_timeout"]
