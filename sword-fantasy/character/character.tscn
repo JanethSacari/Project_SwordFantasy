@@ -807,18 +807,6 @@ tracks/5/keys = {
 "update": 1,
 "values": [true, false, true]
 }
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("Texture:texture:load_path")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": ["res://.godot/imported/Hero_Moves.png-fba90a4d3f4925e5f1f6e14c941dfa94.ctex"]
-}
 
 [sub_resource type="Animation" id="Animation_7tuia"]
 resource_name = "attack_hoe_left"
@@ -895,18 +883,6 @@ tracks/5/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [true, false, true]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("Texture:texture:load_path")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": ["res://.godot/imported/Hero_Moves.png-fba90a4d3f4925e5f1f6e14c941dfa94.ctex"]
 }
 
 [sub_resource type="Animation" id="Animation_3vl5a"]
@@ -985,18 +961,6 @@ tracks/5/keys = {
 "update": 1,
 "values": [true, false, true]
 }
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("Texture:texture:load_path")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": ["res://.godot/imported/Hero_Moves.png-fba90a4d3f4925e5f1f6e14c941dfa94.ctex"]
-}
 
 [sub_resource type="Animation" id="Animation_d1ath"]
 resource_name = "attack_hoe_up"
@@ -1073,18 +1037,6 @@ tracks/5/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [true, false, true]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("Texture:texture:load_path")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": ["res://.godot/imported/Hero_Moves.png-fba90a4d3f4925e5f1f6e14c941dfa94.ctex"]
 }
 
 [sub_resource type="Animation" id="Animation_epubc"]
