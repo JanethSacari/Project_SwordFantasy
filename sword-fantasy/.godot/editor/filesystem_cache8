@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1751935144
+::res://::1752023130
 icon.svg::CompressedTexture2D::5026218776287345796::1740799926::1740799939::1::::<><>::
 ::res://character/::1751502087
 character.gd::GDScript::-1::1751080649::0::1::::<>CharacterBody2D<>::
@@ -17,3 +17,5 @@ Path_Middle.png::CompressedTexture2D::5137713385162881794::1740800745::175141512
 Path_Tile.png::CompressedTexture2D::1054788506196056861::1740800745::1751415125::1::::<><>::
 Water_Middle.png::CompressedTexture2D::4630687977522265569::1740800745::1751415125::1::::<><>::
 Water_Tile.png::CompressedTexture2D::6636754478663919299::1740800745::1751415125::1::::<><>::
+::res://level/::1751938895
+level.tscn::PackedScene::9062501071605671650::1751938895::0::1::::<><>::uid://brla1rh0g0kbh::::res://land/land.tscn<>uid://n04hb0to1ak8::::res://character/character.tscn
