@@ -1,7 +1,7 @@
+CollisionShape2D
 TileMapLayer
 Camera2D
 Label
-CollisionShape2D
 Area2D
 Timer
 AnimationPlayer

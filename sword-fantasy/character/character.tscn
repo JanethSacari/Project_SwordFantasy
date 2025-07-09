@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://n04hb0to1ak8"]
+[gd_scene load_steps=37 format=3 uid="uid://n04hb0to1ak8"]
 
 [ext_resource type="Texture2D" uid="uid://2twhahpec535" path="res://character/Hero.png" id="1_voo8b"]
 [ext_resource type="Script" path="res://character/character.gd" id="1_wvgcb"]
@@ -2209,6 +2209,9 @@ _data = {
 [sub_resource type="LabelSettings" id="LabelSettings_tjcyj"]
 font_size = 8
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_kyo6p"]
+radius = 5.09902
+
 [node name="Character" type="CharacterBody2D" node_paths=PackedStringArray("_character_animation", "_action_timer", "_attack_area", "_weapon_text")]
 script = ExtResource("1_wvgcb")
 _move_speed = 96.0
@@ -2260,5 +2263,8 @@ vertical_alignment = 1
 [node name="Camera2D" type="Camera2D" parent="."]
 position_smoothing_enabled = true
 position_smoothing_speed = 4.0
+
+[node name="CharacterCollision" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_kyo6p")
 
 [connection signal="timeout" from="Action_Timer" to="." method="_on_action_timer_timeout"]
