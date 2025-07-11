@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 var _can_attack: bool = true
-var _actual_weapon: String = "watering_can"
+var _actual_weapon: String = "sword"
 var _animation_suffix: String = "_down"
 
 @export var _move_speed: float = 128.0

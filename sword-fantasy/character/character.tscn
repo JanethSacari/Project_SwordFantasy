@@ -2,7 +2,6 @@
 
 [ext_resource type="Texture2D" uid="uid://2twhahpec535" path="res://character/Hero.png" id="1_voo8b"]
 [ext_resource type="Script" path="res://character/character.gd" id="1_wvgcb"]
-[ext_resource type="Texture2D" uid="uid://c0fmypod2i64q" path="res://character/Hero_Moves.png" id="3_s8gif"]
 
 [sub_resource type="Animation" id="Animation_0hatl"]
 length = 0.001
@@ -66,6 +65,21 @@ tracks/4/keys = {
 "update": 1,
 "values": [true]
 }
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Texture:flip_h")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8g45t"]
+load_path = "res://.godot/imported/Hero_Moves.png-fba90a4d3f4925e5f1f6e14c941dfa94.ctex"
 
 [sub_resource type="Animation" id="Animation_dns1t"]
 resource_name = "attack_axe_down"
@@ -105,7 +119,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [ExtResource("3_s8gif"), ExtResource("3_s8gif")]
+"values": [SubResource("CompressedTexture2D_8g45t"), SubResource("CompressedTexture2D_8g45t")]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -182,7 +196,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("3_s8gif")]
+"values": [SubResource("CompressedTexture2D_8g45t")]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -259,7 +273,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("3_s8gif")]
+"values": [SubResource("CompressedTexture2D_8g45t")]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -336,7 +350,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [ExtResource("3_s8gif"), ExtResource("3_s8gif")]
+"values": [SubResource("CompressedTexture2D_8g45t"), SubResource("CompressedTexture2D_8g45t")]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -413,7 +427,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("3_s8gif")]
+"values": [SubResource("CompressedTexture2D_8g45t")]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -450,18 +464,6 @@ tracks/5/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [true, false, true]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("Texture:texture:load_path")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": ["res://.godot/imported/Hero_Moves.png-fba90a4d3f4925e5f1f6e14c941dfa94.ctex"]
 }
 
 [sub_resource type="Animation" id="Animation_dawtt"]
@@ -502,7 +504,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("3_s8gif")]
+"values": [SubResource("CompressedTexture2D_8g45t")]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -523,10 +525,10 @@ tracks/4/path = NodePath("Texture:flip_h")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.215922),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [true, false, false]
+"values": [true, true]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
@@ -539,18 +541,6 @@ tracks/5/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [true, false, true]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("Texture:texture:load_path")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": ["res://.godot/imported/Hero_Moves.png-fba90a4d3f4925e5f1f6e14c941dfa94.ctex"]
 }
 
 [sub_resource type="Animation" id="Animation_3uyyf"]
@@ -591,7 +581,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("3_s8gif")]
+"values": [SubResource("CompressedTexture2D_8g45t")]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -628,18 +618,6 @@ tracks/5/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [true, false, true]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("Texture:texture:load_path")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": ["res://.godot/imported/Hero_Moves.png-fba90a4d3f4925e5f1f6e14c941dfa94.ctex"]
 }
 
 [sub_resource type="Animation" id="Animation_ks3ru"]
@@ -680,7 +658,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("3_s8gif")]
+"values": [SubResource("CompressedTexture2D_8g45t")]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -717,18 +695,6 @@ tracks/5/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [true, false, true]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("Texture:texture:load_path")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": ["res://.godot/imported/Hero_Moves.png-fba90a4d3f4925e5f1f6e14c941dfa94.ctex"]
 }
 
 [sub_resource type="Animation" id="Animation_hi0ek"]
@@ -769,7 +735,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("3_s8gif")]
+"values": [SubResource("CompressedTexture2D_8g45t")]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -846,7 +812,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("3_s8gif")]
+"values": [SubResource("CompressedTexture2D_8g45t")]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -923,7 +889,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("3_s8gif")]
+"values": [SubResource("CompressedTexture2D_8g45t")]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -1000,7 +966,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("3_s8gif")]
+"values": [SubResource("CompressedTexture2D_8g45t")]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -1098,7 +1064,7 @@ tracks/4/path = NodePath("Texture:flip_h")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0.1, 0.215922),
+"times": PackedFloat32Array(0, 0.3),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, false]
@@ -1114,18 +1080,6 @@ tracks/5/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [true, false, true]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("Texture:texture:resource_path")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": ["res://character/Hero.png"]
 }
 
 [sub_resource type="Animation" id="Animation_acnmj"]
@@ -1187,10 +1141,10 @@ tracks/4/path = NodePath("Texture:flip_h")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0, 0.215922, 0.3, 0.4),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [true, true, true, true]
+"values": [true, true]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
@@ -1203,18 +1157,6 @@ tracks/5/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [true, false, true]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("Texture:texture:load_path")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": ["res://.godot/imported/Hero.png-f28a2cc171cc82f288233f3e51d6744e.ctex"]
 }
 
 [sub_resource type="Animation" id="Animation_solq3"]
@@ -1276,10 +1218,10 @@ tracks/4/path = NodePath("Texture:flip_h")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0.215922),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [false]
+"values": [false, false]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
@@ -1353,10 +1295,10 @@ tracks/4/path = NodePath("Texture:flip_h")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0.215922),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [false]
+"values": [false, false]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
@@ -1409,7 +1351,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("3_s8gif")]
+"values": [SubResource("CompressedTexture2D_8g45t")]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -1434,6 +1376,18 @@ tracks/4/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [true, false, true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Texture:flip_h")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, false]
 }
 
 [sub_resource type="Animation" id="Animation_0pdf8"]
@@ -1474,7 +1428,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("3_s8gif")]
+"values": [SubResource("CompressedTexture2D_8g45t")]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -1495,10 +1449,10 @@ tracks/4/path = NodePath("Texture:flip_h")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.215922),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 0.215922),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [true, true, true]
+"values": [true, true]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
@@ -1551,7 +1505,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("3_s8gif")]
+"values": [SubResource("CompressedTexture2D_8g45t")]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -1576,6 +1530,18 @@ tracks/4/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [true, false, true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Texture:flip_h")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, false]
 }
 
 [sub_resource type="Animation" id="Animation_ev5gh"]
@@ -1616,7 +1582,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("3_s8gif")]
+"values": [SubResource("CompressedTexture2D_8g45t")]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -1641,6 +1607,18 @@ tracks/4/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
 "values": [true, false, true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Texture:flip_h")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, false]
 }
 
 [sub_resource type="Animation" id="Animation_l63ba"]
@@ -1703,10 +1681,10 @@ tracks/4/path = NodePath("Texture:flip_h")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": []
+"values": [false, false]
 }
 
 [sub_resource type="Animation" id="Animation_faum4"]
@@ -1835,10 +1813,10 @@ tracks/4/path = NodePath("Texture:flip_h")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": []
+"values": [false, false]
 }
 
 [sub_resource type="Animation" id="Animation_xbv70"]
@@ -1901,10 +1879,10 @@ tracks/4/path = NodePath("Texture:flip_h")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": []
+"values": [false, false]
 }
 
 [sub_resource type="Animation" id="Animation_go7ml"]
@@ -1967,10 +1945,10 @@ tracks/4/path = NodePath("Texture:flip_h")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": []
+"values": [false, false]
 }
 
 [sub_resource type="Animation" id="Animation_a0yyu"]
@@ -2099,10 +2077,10 @@ tracks/4/path = NodePath("Texture:flip_h")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": []
+"values": [false, false]
 }
 
 [sub_resource type="Animation" id="Animation_d0rbj"]
@@ -2165,10 +2143,10 @@ tracks/4/path = NodePath("Texture:flip_h")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": []
+"values": [false, false]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_tkycv"]
@@ -2223,6 +2201,7 @@ _weapon_text = NodePath("Label")
 [node name="Texture" type="Sprite2D" parent="."]
 position = Vector2(0.5, -7)
 texture = ExtResource("1_voo8b")
+flip_h = true
 hframes = 6
 vframes = 10
 
